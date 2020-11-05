@@ -6,6 +6,8 @@
 #### Component
 Component is the fundamental of React.
 
+More further, function is the core fundamental of React.
+
 It is Data-UI reflect.
 
 It has two core concepts to maintain UI and UI react, that is `props` and `state`.
@@ -124,14 +126,22 @@ class StandardComponent extends React.Component {
 ```
 
 #### Component architecture (Component Compose)
-- Import & Compose component directly
-- Pass component as props
-- this.props.children is similarly to slot
+* Import & Compose component directly
+* Pass component as props
+* this.props.children is similarly to slot
+
+#### Component communication
+* From parent to child: pass props
+* From child to parent: pass props function from parent to child, execute at child
+* From ancestor to offspring: use react context
+* Communication between separate components: use EventEmitter
+
+Of course, react-redux is the most popular way.
 
 #### Data Flow (How Components/App maintain data flow)
-- one way data flow from up to down
-- passing function to child component and lift up data to ancestor, and then flow down
-- use global `Store` to control the whole app data, such as Redux
+* one way data flow from up to down
+* passing function to child component and lift up data to ancestor, and then flow down
+* use global `Store` to control the whole app data, such as Redux
 
 #### Cross-Cutting Concern (also known as Aspect Oriented Programming)
 
@@ -220,7 +230,7 @@ const createStore = (reducer) => {
 
 const store = createStore(counter);
 
-store.dispatch({type: 'ReducerType', payload: data});
+store.dispatch({type: 'INCREMENT', payload: data});
 ```
 
 ## ReactNative Architecture
@@ -358,7 +368,7 @@ You should add other library to consummate you project:
 * redux
 * redux-thunk
 * react-redux
-* react-router-dom
+* react-router-dom (React route could be consider as a component that receive a pecial prop: path)
 
 Commonly the [structure](https://reactjs.org/docs/faq-structure.html) could be:
 * src
