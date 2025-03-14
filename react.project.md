@@ -1,6 +1,5 @@
 ## Dive To React Project (justice-adminportal-website)
 
-
 #### Role & Permission
 Permission is the action (CRUD) accessibility of resource (API).
 

@@ -1,9 +1,9 @@
-## Reactjs Architecture
+# Reactjs Architecture
 * Declarative
 * Component-Based
 * Learn Once, Write Anywhere (Server render, RN)
 
-#### Component
+### Component
 Component is the fundamental of React.
 
 More further, function is the core fundamental of React.
@@ -125,12 +125,12 @@ class StandardComponent extends React.Component {
 }
 ```
 
-#### Component architecture (Component Compose)
+### Component architecture (Component Compose)
 * Import & Compose component directly
 * Pass component as props
 * this.props.children is similarly to slot
 
-#### Component communication
+### Component communication
 * From parent to child: pass props
 * From child to parent: pass props function from parent to child, execute at child
 * From ancestor to offspring: use react context
@@ -138,12 +138,12 @@ class StandardComponent extends React.Component {
 
 Of course, react-redux is the most popular way.
 
-#### Data Flow (How Components/App maintain data flow)
+### Data Flow (How Components/App maintain data flow)
 * one way data flow from up to down
 * passing function to child component and lift up data to ancestor, and then flow down
 * use global `Store` to control the whole app data, such as Redux
 
-#### Cross-Cutting Concern (also known as Aspect Oriented Programming)
+### Cross-Cutting Concern (also known as Aspect Oriented Programming)
 
 Higher Order Component is a classic way to enhance components special feature.
 
@@ -181,10 +181,10 @@ function withHigherOrderComponent(WrappedComponent, options) {
 const EnhancedComponent = withHigherOrderComponent(WrappedComponent);
 ```
 
-#### Utils
+### Utils
   - pure functions to use anywhere
 
-## Redux Architecture
+# Redux Architecture
 * The Single Immutable State Tree (单一的不可变的状态树)
 * Describing State Changes with Actions (用actions来描述状态的改变)
 * The Reducer Function return the new state (reducer函数产生新的状态)
@@ -233,7 +233,7 @@ const store = createStore(counter);
 store.dispatch({type: 'INCREMENT', payload: data});
 ```
 
-## ReactNative Architecture
+# ReactNative Architecture
 
 Using JavaScriptCore as engine.
 
@@ -241,7 +241,7 @@ JavaScript is the bridge between UI and native platform (iOS, Android)
 
 RN Components with inline styles, different app router from web.
 
-## React Hooks
+# React Hooks
 Hooks are functions that let you “hook into” React features from function components, with the purpose for replacement of container components lifecycle to reuse stateful logic between components.
 
 Hooks are JavaScript functions, but they impose two additional rules:
@@ -251,7 +251,7 @@ Hooks are JavaScript functions, but they impose two additional rules:
 
 Because of Hooks behind a scope of array register. such as [...allState] and [...allStateHandlers]
 
-#### State Hook
+### State Hook
 
 `useState` instead of `this.state` and `this.setState` from container components.
 
@@ -273,7 +273,7 @@ function Example() {
 }
 ```
 
-#### Effect Hook
+### Effect Hook
 
 `useEffect` could be consider as `componentDidMount`, `componentDidUpdate` and `componentWillUnmout` combined. By default, it runs both after the first render and every update.
 
@@ -310,18 +310,18 @@ function Example() {
 }
 ```
 
-#### Layout Effect Hook
+### Layout Effect Hook
 
 `useLayoutEffect` is similar to `useEffect`, and will be invoke after every render, but before browser painting. just at the DOM ready. It is painting block and before `useEffect`.
 
-#### Memo Hook
+### Memo Hook
 
 ```
 // It is similar to observer, only recalculate when params changed
 const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
 ```
 
-#### Callback Hook
+### Callback Hook
 
 ```
 // It is similar to observer, only recalculate when params changed, but return a function 
@@ -330,7 +330,7 @@ const memoizedFn = useCallback(() => computeExpensiveValue(a, b), [a, b]);
 const memoizedValue = memoizedFn();
 ```
 
-#### Custom Hook
+### Custom Hook
 
 ```
 /**
@@ -354,7 +354,7 @@ function useFriendStatus(friendID) {
 }
 ```
 
-## React Project Architecture
+# React Project Architecture
 
 Create React App make you focus on code, not build tools for single page application.
 

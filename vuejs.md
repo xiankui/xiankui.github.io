@@ -1,9 +1,9 @@
-## VUE Architecture
+# VUE Architecture
 * Approachable - easy to start
 * Versatile - incrementally ecosystem
 * Performant - automatically effective re-render
 
-#### Component
+### Component
 
 Vue component is similar to Angularjs component, it is a DOM sets with scope.
 
@@ -26,5 +26,5 @@ app.component('todo-item', {
 });
 ```
 
-#### Component architecture
+### Component architecture
 

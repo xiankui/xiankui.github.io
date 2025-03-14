@@ -1,4 +1,4 @@
-## Angularjs Architecture
+# Angularjs Architecture
 
 AngularJS lets you extend HTML vocabulary for your application. Define your DOM structure and its behaviour.
 
@@ -6,7 +6,7 @@ AngularJS is a toolset for building the framework most suited to your applicatio
 
 Angularjs rely on Dependency Injection.
 
-#### Module
+### Module
 
 ```
 /**
@@ -18,7 +18,7 @@ Angularjs rely on Dependency Injection.
  angular.module('phonecatApp', [phoneList]);
 ```
 
-#### Component/Directive
+### Component/Directive
 
 ```
 // Register `phoneList` component, along with its associated controller and template
@@ -49,6 +49,6 @@ angular.
   });
 ```
 
-#### Component architecture (Link/Slot/Scope penetration)
+### Component architecture (Link/Slot/Scope penetration)
 
-#### Data Flow (ngResource)
+### Data Flow (ngResource)
