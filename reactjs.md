@@ -1,9 +1,11 @@
 # Reactjs Architecture
+
 * Declarative
 * Component-Based
 * Learn Once, Write Anywhere (Server render, RN)
 
-### Component
+## Component
+
 Component is the fundamental of React.
 
 More further, function is the core fundamental of React.
@@ -28,7 +30,7 @@ How to implement performance since entire componet (including offspring componen
 
 How to code spliting? dynamic import directly or use library `import loadable from '@loadable/component'`?
 
-* Function Components (also known as Stateless Components, Presentational Components, which concerned with how things look.)
+### Function Components (also known as Stateless Components, Presentational Components, which concerned with how things look.)
 
 ```
 /**
@@ -49,7 +51,7 @@ const StatelessHello = (props) => (<div>hello</div>);
  */
 export default React.memo(StatelessHello, [areEqual]);
 ```
-* Pure Component (you'd better consider it as Presentational Components)
+### Pure Component (you'd better consider it as Presentational Components)
 
 ```
 /**
@@ -65,7 +67,7 @@ class PureHello extends React.PureComponent {
 }
 ```
 
-* Container Components (also called Stateful Components, which concerned with how things work.)
+### Container Components (also called Stateful Components, which concerned with how things work.)
 
 ```
 /**
@@ -181,10 +183,11 @@ function withHigherOrderComponent(WrappedComponent, options) {
 const EnhancedComponent = withHigherOrderComponent(WrappedComponent);
 ```
 
-### Utils
+## Utils
   - pure functions to use anywhere
 
-# Redux Architecture
+### Redux Architecture
+
 * The Single Immutable State Tree (单一的不可变的状态树)
 * Describing State Changes with Actions (用actions来描述状态的改变)
 * The Reducer Function return the new state (reducer函数产生新的状态)
@@ -233,7 +236,7 @@ const store = createStore(counter);
 store.dispatch({type: 'INCREMENT', payload: data});
 ```
 
-# ReactNative Architecture
+## ReactNative Architecture
 
 Using JavaScriptCore as engine.
 
@@ -241,7 +244,7 @@ JavaScript is the bridge between UI and native platform (iOS, Android)
 
 RN Components with inline styles, different app router from web.
 
-# React Hooks
+## React Hooks
 Hooks are functions that let you “hook into” React features from function components, with the purpose for replacement of container components lifecycle to reuse stateful logic between components.
 
 Hooks are JavaScript functions, but they impose two additional rules:
@@ -354,7 +357,7 @@ function useFriendStatus(friendID) {
 }
 ```
 
-# React Project Architecture
+## React Project Architecture
 
 Create React App make you focus on code, not build tools for single page application.
 
